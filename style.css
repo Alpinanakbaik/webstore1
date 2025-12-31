@@ -1,0 +1,116 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Times New Roman;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("../foto/background.jpg");
+}
+#nav-container {
+  background-color: black;
+  position: sticky;
+  top: 0px;
+}
+.nav-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+}
+.nav-flex label,#humberger {
+  display: none;
+}
+.nav-flex .nama h3 {
+  color: white;
+  margin: 14px 0 0 10px;
+  font-size: 30px;
+  text-shadow: 0 0 10px white;
+}
+.nav-flex .nama span {
+  color: rgb(58 211 3);
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+nav ul li a {
+  text-decoration: none;
+  display: block;
+  color: rgb(58 211 3);
+  padding: 0 16px;
+  line-height: 60px;
+  text-shadow: 0 0 10px white;
+}
+nav ul li a:hover {
+  border-bottom: 3px solid rgb(58 211 3);
+  transition: 0.3s;
+}
+
+/* MOBILE */
+@media only screen and (max-width:768px) {
+  #nav-container .nav-flex label {
+    display: inline-block;
+    color: rgb(58 211 3);
+    font-style: normal;
+    font-size: 32px;
+    padding: 8px;
+    text-shadow: 0 0 10px white;
+  }
+  #nav-container .nav-flex {
+    width: 100%;
+  }
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: black;
+  }
+  nav ul li a {
+    display: block;
+    padding: 0 30px;
+    height: auto;
+  }
+  .nama h3 {
+    position: absolute;
+    right: 20px;
+  }
+  /* KLIK TOMBOL NAVIGASI */
+  #nav-container nav {
+    display: none;
+  }
+  #nav-container .nav-flex input:checked ~ nav {
+    display: flex;
+  }
+  /* INDEX.HTML */
+  #utama {
+    flex-direction: column; /* bikin ke bawah */
+    text-align: center;
+    padding-top: 2rem;
+  }
+  #utama .foto img {
+    width: 200px;
+    height: 200px;
+  }
+  #utama .nama {
+    align-items: center;
+    max-width: 90%;
+  }
+  #utama .nama p {
+    margin-top: 15px;
+  }
+  .box {
+    flex-direction: column;
+    text-align: center;
+  }
+  .box-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

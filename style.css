@@ -3,6 +3,7 @@
   margin: 0;
   font-family: Times New Roman;
   box-sizing: border-box;
+  color: white;
 }
 body {
   background-image: url("../foto/background.jpg");
